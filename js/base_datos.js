@@ -14,7 +14,7 @@ import { new_empleado, employees_actives_in_draw,delete_empleado } from "./emple
 import {add_herramienta_employes,delete_herramienta_employes} from "./herramientas.js";
 import {carrusel_active,Carrusel_next_cards,Carrusel_after_cards} from "./Carrusel.js";
 import {delete_checked_inputs_of_card} from "./input.js";
-import {search_cards_employees} from "./buscador.js";
+import {search_cards_employees} from "./Buscador.js";
 $(document).ready(function () {
   $(".js-example-basic-multiple").select2();
 });
