@@ -4,10 +4,17 @@ import {
   activadades_select,
   draw_empleado_info,
   carousel_next,
+  delete_cards_selects,
+  reset_changeable,
+  clear_viewport,
+  submit,
+  search_input,
 } from "./variables.js";
 import { new_empleado, employees_actives_in_draw,delete_empleado } from "./empleados.js";
 import {add_herramienta_employes,delete_herramienta_employes} from "./herramientas.js";
 import {carrusel_active,Carrusel_next_cards,Carrusel_after_cards} from "./Carrusel.js";
+import {delete_checked_inputs_of_card} from "./input.js";
+import {search_cards_employees} from "./buscador.js";
 $(document).ready(function () {
   $(".js-example-basic-multiple").select2();
 });
@@ -32,6 +39,12 @@ let empleados = [
 ];
 let herramientas = [
   "Escalera de extension",
+  "Brocasierra",
+  "Cucharon",
+  "Pala",
+  "Pico",
+  "Lima",
+  "Andamio",
   "Metricas",
   "Pala",
   "Martillo",
@@ -113,3 +126,15 @@ Carrusel_next_cards();
 carousel_after.addEventListener("click",(e)=>{
     Carrusel_after_cards();
 })
+delete_cards_selects.addEventListener("click",(e)=>{
+  delete_checked_inputs_of_card();
+});
+clear_viewport.addEventListener("click",(e)=>{
+  reset_changeable();
+});
+submit.addEventListener("click",(e)=>{
+  reset_changeable();
+});
+search_input.addEventListener("input",(e)=>{
+  search_cards_employees(search_input.value);
+});

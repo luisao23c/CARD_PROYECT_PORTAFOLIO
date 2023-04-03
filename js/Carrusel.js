@@ -1,12 +1,13 @@
 import{move_right_carrusel,move_right_carrusel_more,move_left_carrusel_more} from "./variables.js";
 export  function carrusel_active(){
 let cards = document.querySelectorAll(".card");
-console.clear();
 for (let i = 0; i < cards.length; i++) {
     if (i <=3){
         if (cards[i].classList.contains("card_inactive")) {
             cards[i].classList.remove("card_inactive");
         }
+        cards[i].classList.add("card");
+
     }else{
 
         cards[i].classList.add("card_inactive");
@@ -38,7 +39,7 @@ export function Carrusel_after_cards(){
     let cards = document.querySelectorAll("#draw_empleado_info>div");
     let pasa = 0;
     if (cards.length >4){
-        if (move_right_carrusel <=-2) {
+        if (move_right_carrusel <=0) {
             return  move_right_carrusel = 0;
           }
         for (let i = 0; i < cards.length; i++) {
@@ -60,7 +61,6 @@ export function Carrusel_after_cards(){
             }
             
         } 
-        console.clear();
         console.log(pasa);
         if (pasa<4){
             let cantidad_faltante = 0;
