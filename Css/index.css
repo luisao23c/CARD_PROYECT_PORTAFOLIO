@@ -1,0 +1,256 @@
+
+body{
+    background: #ebf7f8;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.Contenido {
+    display: flex;
+    margin-left: 8%;
+}
+.select2-container--default .select2-selection--multiple {
+    background-color: white;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    cursor: text;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    position: relative;
+    height: 8em;
+    overflow: auto;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+}
+.titulos p{
+    width: 30%;
+    text-align: center;
+    display: inline-block;
+}
+#carrusel{
+    width: 100%;
+    display: flex;
+}
+
+
+/* Cards*/
+
+.card{
+    margin-top: 2.2em;
+    float: left;
+    width: 20%;
+    margin-left: 2%;
+    margin-right:2% ;
+    border: 1px solid #000000;
+    position: relative;
+
+}
+
+
+.card span{
+    border: 10px solid #0000;
+    background-color:#d0e0eb;
+    display: block;
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: #260729;
+}
+
+.card ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+border: 1px solid #000000;
+text-align: start;
+}
+.card ul li div:first-child{
+    display: inline-block;
+    max-width: 15%;
+   
+}
+.card ul li{
+    border: 1px solid #000000;
+}
+.card ul li div:nth-child(2){
+    font-size: .9em;
+    max-width: 70%;
+    width: 100%;
+    display: inline-block;
+}
+.card ul li div input{
+    width: 60%;
+    height: 1em;
+}
+.card ul li div:last-child{
+    width: 15%;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+
+}
+.card ul li div button{
+    width: 100%;
+    background-color: #ff0000;
+    border-color:#ff0000 ;
+    cursor: pointer;
+}
+
+.name{
+    font-size: 1.2em;
+    text-align: center;
+
+}
+/*CARRUSEL*/
+.card_inactive{
+    display: none;
+}
+#draw_empleado_info{
+    max-width: 80%;
+    overflow: auto;
+    width: 80%;
+    max-height: 20em;
+    }
+#carousel_control_next{
+    width: 10%;
+    margin: 0;
+    padding: 0;
+
+}
+#carousel_control_next button{
+    margin-top: 1em;
+    background: none;
+    border: none;
+    color: #495168;
+    
+
+}
+#carousel_control_next button svg{
+    cursor: pointer;
+
+}
+#carousel_control_next button svg:hover{
+    color: #49708a;
+
+}
+/*Buscador*/
+.Search {
+    width: fit-content;
+    height: fit-content;
+margin: auto;
+}
+.Search input{
+    width: 35em;
+    height: 1.7em;
+    margin-top: 1.5em;
+    transition: all 1.5s;
+    -webkit-transition:;
+    -moz-transition:;
+    -ms-transition:;
+    -o-transition:;
+    background-color: transparent;
+    color : #000 ;
+}
+
+.Search input::placeholder{
+    text-align: center;
+    color: #000000;
+}
+
+
+.select2-container--default .select2-selection--multiple {
+    background: #d0e0eb !important;
+    border: 1px solid #49708a;
+    border-radius: 4px;
+    cursor: text;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    position: relative;
+}
+.select2-container--default .select2-selection--multiple {
+    background-color: white;
+    border: 1px solid #49708a !important;
+    border-radius: 4px;
+    cursor: text;
+    padding-bottom: 5px
+px
+;
+    padding-right: 5px;
+    position: relative;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__display {
+    cursor: pointer !important;
+    padding-left: 2px;
+    padding-right: 5px;
+    background: #ebf7f8;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    background-color: transparent;
+    border: none;
+    border-right: 1px solid #d0e0eb !important;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    color: #000000;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 0 4px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #ebf7f8 !important;
+}
+.div_checkbox{
+    width: 0;
+    height: 0;
+}
+.checkbox{
+    position: relative;
+    top: -2em;
+    width: 1em;
+    height: 1em;
+}
+input[type="checkbox"]{
+    width: 1.2em;
+    height: 1.2em;
+    margin-left: 8.5em;
+}
+input[type="checkbox"]:checked {
+
+
+}
+.actions_buttons_cards{
+    margin-left:35%;
+
+}
+
+.actions_buttons_cards button{
+    background-color: #d0e0eb;
+    /*Green*/border: none;
+    color: black;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 2px;
+    cursor: pointer;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+}
+
+.actions_buttons_cards button:hover{
+    background-color: #88c0e6; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 2px;
+
+}
