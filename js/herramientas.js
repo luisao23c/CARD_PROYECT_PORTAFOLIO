@@ -1,4 +1,6 @@
-import {card_ul_item_cont,card_ul_item_cont_more} from "./variables.js";
+import {card_ul_item_cont,card_ul_item_cont_more,add_new_herramienta} from "./variables.js";
+import {write_inputs_text} from "./input.js";
+
 export function add_herramienta_employes(data){
     let cards_employees = document.querySelectorAll("#draw_empleado_info>div>ul");
     for (let i = 0; i < cards_employees.length; i++){
@@ -10,6 +12,11 @@ export function add_herramienta_employes(data){
      div_herramienta.innerHTML =data;
      let input_quantity = document.createElement("input");
      input_quantity.type = "text";
+     input_quantity.classList.add("quantity");
+     input_quantity.id ="quantity"+add_new_herramienta;
+     input_quantity.addEventListener("input",(e)=>{
+        write_inputs_text(input_quantity.value,input_quantity.id);
+     })
      div_quantity.appendChild(input_quantity);
      let button_delete = document.createElement("button");
      button_delete.innerHTML = `<svg onclick="document.getElementById('card_list_item${card_ul_item_cont}').remove()" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">

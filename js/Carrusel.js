@@ -61,14 +61,12 @@ export function Carrusel_after_cards(){
             }
             
         } 
-        console.log(pasa);
         if (pasa<4){
             let cantidad_faltante = 0;
             while (pasa!=4){
                 pasa++;
                 cantidad_faltante ++;
             }
-            console.log(cantidad_faltante);
     
             for (let i = move_right_carrusel; i <move_right_carrusel+cantidad_faltante; i++) {
                 if (document.getElementById("card"+i)) {

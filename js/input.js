@@ -25,3 +25,18 @@ function update_select_empleados(employee){
     $("#empleados").trigger("change"); 
 
 }
+export function write_inputs_text(text,id){
+   let inputs = document.querySelectorAll(`#${id}`);
+   for (let i = 0; i < inputs.length; i++) {
+        if (inputs[i].parentNode.parentNode.parentNode.parentNode.firstChild.firstChild.checked)
+         {
+           inputs[i].value = text;
+         }
+    
+   }
+   
+        
+            
+
+        
+}

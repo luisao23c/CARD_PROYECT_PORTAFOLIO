@@ -9,6 +9,7 @@ import {
   clear_viewport,
   submit,
   search_input,
+  add_new_herramienta_more
 } from "./variables.js";
 import { new_empleado, employees_actives_in_draw,delete_empleado } from "./empleados.js";
 import {add_herramienta_employes,delete_herramienta_employes} from "./herramientas.js";
@@ -109,6 +110,7 @@ $("#actividades").on("select2:select", function (e) {
 $("#actividades").on("select2:unselect", function (e) {});
 $("#herramientas").on("select2:select", function (e) {
     let data = e.params.data.text;
+    add_new_herramienta_more();
     add_herramienta_employes(data);
 });
 $("#herramientas").on("select2:unselect", function (e) {
