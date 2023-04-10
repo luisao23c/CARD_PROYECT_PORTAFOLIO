@@ -226,10 +226,35 @@ input[type="checkbox"]:checked {
 
 
 }
+input[type="range"] {
+ width: 30em;
+ float: right;
+ margin-right: 11em;
+ margin-top: .5em;
+ -webkit-appearance: none;
+ background: transparent;
+ color: transparent;
+ background: #d0e0eb;
+}
+input[type=range]:focus {
+    outline: none; /*Elimina el borde azul. Se debería dar estilo de enfoque por razones de accesibilidad */
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #04e8fd;
+    height: 1.3em;
+    width: 1.3em;
+    border-radius: 3px;
+    background: #dcebd0;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #02eaff, 0px 0px 1px #0d0d0d; 
+  }
 .actions_buttons_cards{
-    margin-left:35%;
+    margin-left:38%;
 
 }
+
 
 .actions_buttons_cards button{
     background-color: #d0e0eb;
@@ -260,4 +285,20 @@ input[type="checkbox"]:checked {
     font-size: 16px;
     margin-left: 2px;
 
+}
+/*peticiones*/
+.peticiones_enviadas{
+    text-align: center;
+    background-color: #73ff91;
+}
+.opciones_proceso_list{
+    position: absolute;
+    left: 67%;
+    top: 32%;
+}
+.opciones_proceso_list label{
+    margin-left: 1.5em;
+}
+.opciones_proceso_list :first-child{
+    margin-left: 0em;
 }

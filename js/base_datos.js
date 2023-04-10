@@ -9,13 +9,27 @@ import {
   clear_viewport,
   submit,
   search_input,
-  add_new_herramienta_more
+  add_new_herramienta_more,
+  opciones_proceso,
 } from "./variables.js";
-import { new_empleado, employees_actives_in_draw,delete_empleado } from "./empleados.js";
-import {add_herramienta_employes,delete_herramienta_employes} from "./herramientas.js";
-import {carrusel_active,Carrusel_next_cards,Carrusel_after_cards} from "./Carrusel.js";
-import {delete_checked_inputs_of_card} from "./input.js";
-import {search_cards_employees} from "./Buscador.js";
+import {
+  new_empleado,
+  employees_actives_in_draw,
+  delete_empleado,
+} from "./empleados.js";
+import {
+  add_herramienta_employes,
+  delete_herramienta_employes,
+} from "./herramientas.js";
+import {
+  carrusel_active,
+  Carrusel_next_cards,
+  Carrusel_after_cards,
+} from "./Carrusel.js";
+import { delete_checked_inputs_of_card, select_range } from "./input.js";
+import { search_cards_employees } from "./Buscador.js";
+import { peticion_enviada } from "./Peticiones.js";
+
 $(document).ready(function () {
   $(".js-example-basic-multiple").select2();
 });
@@ -100,43 +114,46 @@ $("#empleados").on("select2:select", function (e) {
   new_empleado(data);
 });
 $("#empleados").on("select2:unselect", function (e) {
-    let data = e.params.data.text;
+  let data = e.params.data.text;
   delete_empleado(data);
 });
 
-$("#actividades").on("select2:select", function (e) {
-});
+$("#actividades").on("select2:select", function (e) {});
 
 $("#actividades").on("select2:unselect", function (e) {});
 $("#herramientas").on("select2:select", function (e) {
-    let data = e.params.data.text;
-    add_new_herramienta_more();
-    add_herramienta_employes(data);
+  let data = e.params.data.text;
+  add_new_herramienta_more();
+  add_herramienta_employes(data);
 });
 $("#herramientas").on("select2:unselect", function (e) {
-    let data = e.params.data.text;
-    delete_herramienta_employes(data);   
+  let data = e.params.data.text;
+  delete_herramienta_employes(data);
 });
 
 draw_empleado_info.addEventListener("DOMSubtreeModified", (e) => {
- employees_actives_in_draw();
-carrusel_active();
+  employees_actives_in_draw();
+  carrusel_active();
 });
-carousel_next.addEventListener("click",(e)=>{
-Carrusel_next_cards();
+carousel_next.addEventListener("click", (e) => {
+  Carrusel_next_cards();
 });
-carousel_after.addEventListener("click",(e)=>{
-    Carrusel_after_cards();
-})
-delete_cards_selects.addEventListener("click",(e)=>{
+carousel_after.addEventListener("click", (e) => {
+  Carrusel_after_cards();
+});
+delete_cards_selects.addEventListener("click", (e) => {
   delete_checked_inputs_of_card();
 });
-clear_viewport.addEventListener("click",(e)=>{
+clear_viewport.addEventListener("click", (e) => {
   reset_changeable();
 });
-submit.addEventListener("click",(e)=>{
-  reset_changeable();
+submit.addEventListener("click", (e) => {
+  // reset_changeable();
+  peticion_enviada();
 });
-search_input.addEventListener("input",(e)=>{
+search_input.addEventListener("input", (e) => {
   search_cards_employees(search_input.value);
+});
+opciones_proceso.addEventListener("input", (e) => {
+  select_range(opciones_proceso);
 });

@@ -13,6 +13,9 @@ export let delete_cards_selects = document.getElementById("delete_cards_selects"
 export let clear_viewport = document.getElementById("clear_viewport");
 export let submit = document.getElementById("submit");
 export let search_input = document.getElementById("search_input");
+export let opciones_proceso = document.getElementById("opciones_proceso");
+export let peticiones_requisicion = [];
+
 export function restar_employees_actives()
 {
     employees_actives =[];
